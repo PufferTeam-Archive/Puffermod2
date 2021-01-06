@@ -58,14 +58,9 @@ public class Puffermod {
             super(index, label);
         }
 
-        /*@Override
-        public ItemStack createIcon() {
-            return new ItemStack(ItemInit.refined_iron_ingot.get());
-        }*/
-
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.STONE);
+            return new ItemStack(ItemInit.cheese.get());
         }
 
         @Override

@@ -122,17 +122,6 @@ public class MyCustomArmorModel extends ArmorBaseModel {
         return this;
     }
 
-// Here we are going to change the return type of this to that name of our class if it's not changed already
-
-// How do we do that?
-    /* In java you can find a method return type by looking at whatever is before the method name. Here are some examples
-     *  public String getTexture() {} will return a String
-     *  public void doStuff() {} will return nothing, hence the name void
-     *  public boolean isFlying() {} will return either true or false
-     *  You get it, there are a ton of options for this
-     *  Below we are returning an instance of our class. Our class is what we are referring to when we say return 'this'
-     */
-
     public final MyCustomArmorModel applyEntityStats(BipedModel defaultArmor){
         this.isChild = defaultArmor.isChild;
         this.isSneak = defaultArmor.isSneak;
@@ -144,16 +133,11 @@ public class MyCustomArmorModel extends ArmorBaseModel {
     }
 
 
-    // We usually don't have to touch this method or any of the ones below
-// Just use what BlockBench gives you for the render method
     @Override
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight,
                        int packedOverlay, float red, float green, float blue, float alpha){
         bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
     }
-
-// I'm not 100% sure because I'm doing this off the top of my head but you might get an error because your IDE wants to use a setRotationAngles method instead of setRotationAngle
-// If you aren't having this problem just ignore this.
 
     public final void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
